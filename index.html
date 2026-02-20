@@ -36,8 +36,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var allergy_count = 0;//a variable that counts answers correlating to allergies
+        var cold_count = 0;//a variable that counts answers correlating to cold 
 
 
         function allergyAdd(){
@@ -45,10 +45,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		alert(allergy_count);
 
         }
+	//function that calculates the number of answers correlating to allergies
 
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	//function that calculates the number of answers correlating to cold
+	
+		function results ()
+		{
+			var allergyPercent = (allergy_count/4)*100 //I defined a new variable to calculate the allergy percent.//
+			var coldPercent = (cold_count/4)*100; //I defined a new variable to calculate the cold percent.//
+			var resultText = document.getElementbyID("results");
+			resultText.innerHTML = "Probability it is allergies =" + allergyPercent "%" + "<br>  Probability it is a cold =" + coldPercent + "%";
+
+		}
+	//function that calculates and outputs the probability that the symptoms are allergies or a cold
 
   </script>
 
@@ -154,6 +166,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div id="content" class="w3-container">
 		<p id="results"></p>p>
 		<a href="#five" onclick="resultsPercent():" class="w3-btn w3-black"> Click for results! </a>
+	<!-- This is the last page, and click for results button outputs the two probailities for having either allergy or cold -->
 </div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
