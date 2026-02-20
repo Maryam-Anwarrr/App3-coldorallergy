@@ -99,17 +99,37 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
         	<p>Are your eyes watery or itchy?</p> 
 			<!-- I added the first question here. -->
-    		<a href="#two" class="w3-btn w3-black"> Yes </a>	
-			<a href="#two" class="w3-btn w3-black"> No </a>			
+    		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>	
+			<a href="#two" oneclick="coldAdd();" class="w3-btn w3-black"> No </a>	
+			<!-- I added the answers here for if someone chooses yes or no, if it will add to probability count to allergy or cold. -->
 		</div>
 </div>
-
+<!-- Now we are on the next page. -->
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Do you have a fever?</h1>
 		<!-- I added the question here. -->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>	
+			<a href="#two" oneclick="allergyAdd();" class="w3-btn w3-black"> No </a>		
+		<!-- I added the answers here. -->
 	</div>
-	
+</div>
+	<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Do you have a sore throat</h1>
+		<!-- I added the question here. -->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>	
+			<a href="#two" oneclick="allergyAdd();" class="w3-btn w3-black"> No </a>		
+		<!-- I added the answers here. -->
+	</div>
+	</div>
+	<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Are your symptoms seasonal or chronic? </h1>
+		<!-- I added the question here. -->
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>	
+			<a href="#two" oneclick="coldAdd();" class="w3-btn w3-black"> No </a>		
+		<!-- I added the answers here. -->		
 	<div id="content" class="w3-container">
 		<p>Content of page 2 goes here.</p>
 	</div>
